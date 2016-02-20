@@ -20,13 +20,14 @@
   "dependencies": {
     "axios": "^0.9.1",
     "babel-preset-stage-1": "^6.1.18",
+    "dot-prop-immutable": "^1.1.2",
     "immutable": "^3.7.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "redux": "^3.0.4",
-    "redux-promise-middleware": "^2.3.3",
+    "redux-promise": "^0.5.1",
     "redux-thunk": "^1.0.3"
   }
 }

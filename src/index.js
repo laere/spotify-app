@@ -4,8 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 //Middleware chained in order
 import Thunk from 'redux-thunk';
-import Promise from 'redux-promise-middleware';
-
+import Promise from 'redux-promise';
 
 import App from './containers/app';
 import AppState from './reducers/AppState';

@@ -6,22 +6,22 @@ import ListItem from './ListItem';
 
 export default class List extends Component {
 
+  constructor() {
+    super();
+
+    this.renderData = this.renderData.bind(this);
+  }
 
 
-  // renderAlbums() {
-  //   const { albums } = this.props;
-  //
-  //   return albums.map((album) =>{
-  //     return (
-  //       <ListItem />
-  //     );
-  //   });
-  // }
+  renderData() {
+
+    
+  }
 
   render() {
     return (
       <div>
-        
+        {this.renderData()}
       </div>
     );
   }
