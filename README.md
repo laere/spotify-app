@@ -10,3 +10,4 @@ Immutable data: dot-prop library.
 
 Talking to the API: Axios.
 
+There is little pre-planning going into this. Although that may be a bad thing in the long run, I want to make mistakes and learn from them. Trying to get it perfect from the start is not the way to do it!
