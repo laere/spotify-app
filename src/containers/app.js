@@ -1,11 +1,11 @@
 import React from 'react';
 import { Component } from 'react';
-
+import { connect } from 'react-redux';
+//Child Components
 import Searchbar from '../components/Searchbar';
 import List from '../components/List';
-
-import { connect } from 'react-redux';
-import { getAlbums } from '../actions/actions';
+//Actions
+import { getArtist } from '../actions/actions';
 
 
 
@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    this.props.getAlbums();
+    this.props.getArtist();
   }
 
   render() {
@@ -25,7 +25,9 @@ class App extends Component {
     return (
       <div>
         <Searchbar />
-        <List />
+        <List
+
+          />
       </div>
     );
   }
@@ -33,7 +35,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return ({ albums: state.albums })
+  return ({ artist: state.artist })
 }
 
-export default connect(mapStateToProps, { getAlbums })(App);
+export default connect(mapStateToProps, { getArtist })(App);
