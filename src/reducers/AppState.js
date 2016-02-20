@@ -1,14 +1,12 @@
 import Immutable from 'immutable';
 
+import { GET_ALBUMS } from '../actions/actions';
 
-import { actions } from './actions/actions';
-
-const initialState = {
+const INITIAL_STATE = {
   albums: []
 };
 
-
-export const AppState(state = initialState, action) {
+export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
     case GET_ALBUMS:
       return state;

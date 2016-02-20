@@ -1,24 +1,15 @@
 import React from 'react';
+import { Component } from 'react';
+
 import ListItem from './ListItem';
 
 
-class List = () => {
-  
-  const { albums } = this.props
-
-  renderList() {
-    if(albums) {
-      return albums.map((album) => {
-        return (
-          <ListItem />
-        );
-      });
-    }
+export default class List extends Component {
+  render() {
+    return (
+      <div></div>
+    );
   }
-
-  <ul>
-    {renderList()}
-  </ul>
 }
 
 export default List;

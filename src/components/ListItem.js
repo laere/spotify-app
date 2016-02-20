@@ -3,7 +3,7 @@ import React from 'react';
 
 const ListItem = () => {
   <li>
-    {this.props.album}
+    Text
   </li>
 }
 

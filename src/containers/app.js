@@ -1,12 +1,25 @@
 import React from 'react';
 import { Component } from 'react';
 
-import List from './List';
+import Searchbar from '../components/Searchbar';
+import List from '../components/List';
 
-const App = () => {
-  <div>
-    <Searchbar />
-    <List />
-  </div>
+import { connect } from 'react-redux';
 
-export default App
+
+
+class App extends Component {
+
+  render() {
+    return (
+      <div>
+        <Searchbar />
+        <List/>
+      </div>
+    );
+  }
+
+}
+
+
+export default App;
