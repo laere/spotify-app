@@ -1,28 +1,30 @@
 import React from 'react';
 import { Component } from 'react';
 
-import ListItem from './ListItem';
+// import ListItem from './ListItem';
 
 
 export default class List extends Component {
 
   constructor() {
     super();
+    this.test2 = this.test2.bind(this);
 
-    this.renderData = this.renderData.bind(this);
   }
 
-
-  renderData() {
-
-
+  test2() {
+    console.log(this.props.artistData);
   }
 
   render() {
+
+      let artistData = this.props.artistData;
+
     return (
-      <div>
-        {this.renderData()}
-      </div>
+    <div>
+      <span>{artistData.name}</span>
+      <button onClick={this.test2}>Test2</button>
+    </div>
     );
   }
 }

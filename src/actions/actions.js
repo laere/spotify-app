@@ -9,12 +9,12 @@ const BASE_URL = 'https://api.spotify.com/v1/search';
 
   //make sure to add query eventually
 export const getArtist = () => {
+
   return (dispatch, getState) => {
   const request = axios.get(`${BASE_URL}?q=killswitch%20engage&type=artist`);
 
     request.then(function(response) {
       console.log(response);
-
       dispatch({
         type: GET_ARTIST,
         payload: request
@@ -26,8 +26,9 @@ export const getArtist = () => {
   };
 };
 
-export const inputChange = (text) =>
+export const inputChange = (text) => {
   return {
     type: INPUT_CHANGE,
     payload: text
   }
+}
