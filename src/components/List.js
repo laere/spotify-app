@@ -19,13 +19,15 @@ export default class List extends Component {
   }
 
   renderArtistImages() {
-  if(this.props.artistData !== this.props.artistData) {
-    return this.props.artistData.images.map(obj => {
-        return (
-          <ListItem img={obj.url} key={obj.id} />
-        );
-      });
-    }
+    const { artistData } = this.props;
+
+    if(artistData !== artistData) {
+      return artistData.images.map(img => {
+          return (
+            <ListItem img={img.url} />
+          );
+        });
+      }
   }
 
   // renderArtistGenres() {
@@ -40,7 +42,7 @@ export default class List extends Component {
 
   render() {
 
-      let artistData = this.props.artistData;
+    const { artistData } = this.props;
 
     return (
       <div>

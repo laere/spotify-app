@@ -11,14 +11,19 @@ export default class Searchbar extends Component {
   }
 
   handleOnChange(e) {
-    let value = e.target.value;
-    this.props.getInput(value);
+    const { getInput } = this.props;
+
+    this.props.getInput(e.target.value);
   }
 
   handleOnSubmit(e) {
     e.preventDefault();
-    if(this.props.searchValue === '') return;
-    this.props.getArtist(this.props.searchValue);
+
+    const { searchValue, getArtist } = this.props;
+
+    if(searchValue === '') return;
+    
+    getArtist(searchValue);
   }
 
   render() {

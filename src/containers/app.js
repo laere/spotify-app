@@ -15,16 +15,19 @@ class App extends Component {
   }
 
   render() {
+
+    const { getInput, getArtist, searchValue, artist } = this.props;
+
     return (
       <div>
         <Searchbar
-          getInput={this.props.getInput}
-          getArtist={this.props.getArtist}
-          searchValue={this.props.searchValue}
+          getInput={getInput}
+          getArtist={getArtist}
+          searchValue={searchValue}
         />
         <List
-          artistData={this.props.artist}
-          getArtist={this.props.getArtist}
+          artistData={artist}
+          getArtist={getArtist}
         />
       </div>
     );
