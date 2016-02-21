@@ -7,8 +7,6 @@ import List from '../components/List';
 //Actions
 import { getArtist } from '../actions/actions';
 
-
-
 class App extends Component {
 
   constructor() {
@@ -26,11 +24,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.artist);
     return (
       <div>
         <Searchbar />
-        <List/>
+        <List />
         <button onClick={this.test}>Test</button>
       </div>
     );
