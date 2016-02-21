@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Searchbar from '../components/Searchbar';
 import List from '../components/List';
 //Actions
-import { getArtist, inputChange } from '../actions/actions';
+import { getArtist, getInput } from '../actions/actions';
 
 
 class App extends Component {
@@ -22,16 +22,14 @@ class App extends Component {
 
   test() {
     console.log(this.props.artist);
-    console.log(this.props.searchValue);
-    console.log(this.props.inputChange);
   }
 
   render() {
+
     return (
       <div>
         <Searchbar
-          searchValue={this.props.searchValue}
-          inputChange={this.props.inputChange}
+          getInput={this.props.getInput}
         />
         <List
           artistData={this.props.artist}
@@ -44,9 +42,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return ({
-    artist: state.artist,
-    searchValue: state.searchValue
+    artist: state.artist
   })
 }
 
-export default connect(mapStateToProps, { getArtist, inputChange } )(App);
+export default connect(mapStateToProps, { getArtist, getInput } )(App);

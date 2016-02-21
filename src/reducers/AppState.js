@@ -1,11 +1,12 @@
 import Immutable from 'immutable';
 import dotProp from 'dot-prop-immutable';
 
-import { GET_ARTIST, INPUT_CHANGE } from '../actions/actions';
+import { GET_ARTIST, GET_INPUT } from '../actions/actions';
 
 const INITIAL_STATE = {
   artist: [],
   searchValue: ''
+
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -14,7 +15,7 @@ export default function(state = INITIAL_STATE, action) {
       state = dotProp.set(state, 'artist', action.payload.data.artists.items[0]);
       console.log(state);
       return state;
-    case INPUT_CHANGE:
+    case GET_INPUT:
       state = dotProp.set(state, 'searchValue', action.payload);
       console.log(state);
       return state;
