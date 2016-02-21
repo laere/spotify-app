@@ -2,9 +2,9 @@ import React from 'react';
 
 
 const ListItem = () => {
-  <li>
-    {this.props.img}
-  </li>
+  <div>
+    <img src={this.props.img} />
+  </div>
 }
 
 export default ListItem;

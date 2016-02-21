@@ -12,12 +12,12 @@ export default class Searchbar extends Component {
 
   handleOnChange(e) {
     let value = e.target.value;
-    let formattedValue = value.split(' ').join('%20');
     this.props.getInput(value);
   }
 
   handleOnSubmit(e) {
     e.preventDefault();
+    if(this.props.searchValue === '') return;
     this.props.getArtist(this.props.searchValue);
   }
 

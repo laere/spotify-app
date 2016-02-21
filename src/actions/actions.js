@@ -4,6 +4,7 @@ import axios from 'axios';
 export const GET_ARTIST = 'GET_ARTIST';
 export const GET_INPUT = 'GET_INPUT';
 
+
 //other constants
 const BASE_URL = 'https://api.spotify.com/v1/search';
 

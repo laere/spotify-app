@@ -12,16 +12,9 @@ class App extends Component {
 
   constructor() {
     super();
-
-    this.test = this.test.bind(this);
-  }
-
-  test() {
-    console.log(this.props.artist);
   }
 
   render() {
-
     return (
       <div>
         <Searchbar
@@ -31,8 +24,8 @@ class App extends Component {
         />
         <List
           artistData={this.props.artist}
+          getArtist={this.props.getArtist}
         />
-        <button onClick={this.test}>Test</button>
       </div>
     );
   }
