@@ -16,10 +16,6 @@ class App extends Component {
     this.test = this.test.bind(this);
   }
 
-  componentWillMount() {
-    this.props.getArtist();
-  }
-
   test() {
     console.log(this.props.artist);
   }
@@ -30,6 +26,8 @@ class App extends Component {
       <div>
         <Searchbar
           getInput={this.props.getInput}
+          getArtist={this.props.getArtist}
+          searchValue={this.props.searchValue}
         />
         <List
           artistData={this.props.artist}
@@ -42,7 +40,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return ({
-    artist: state.artist
+    artist: state.artist,
+    searchValue: state.searchValue
   })
 }
 

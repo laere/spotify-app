@@ -7,6 +7,7 @@ export default class Searchbar extends Component {
     super()
 
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnSubmit = this.handleOnSubmit.bind(this);
   }
 
   handleOnChange(e) {
@@ -15,12 +16,17 @@ export default class Searchbar extends Component {
     this.props.getInput(value);
   }
 
+  handleOnSubmit(e) {
+    e.preventDefault();
+    this.props.getArtist(this.props.searchValue);
+  }
+
   render() {
     return (
       <div>
-        <form >
+        <form onSubmit={this.handleOnSubmit}>
           <input type="text" onChange={this.handleOnChange}/>
-          <button >Search</button>
+          <button>Search</button>
         </form>
       </div>
     );
