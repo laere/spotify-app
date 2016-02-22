@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 // import ListItem from './ListItem';
 
 export default class DisplayArtistInfo extends Component {
@@ -28,6 +29,7 @@ export default class DisplayArtistInfo extends Component {
         <div>
           <div>Name:  {artistData.name}</div>
           <div>Genres: {artistGenres}</div>
+          <div>Followers: {artistData.followers.total}</div>
           <img src={artistImage} />
           <button onClick={this.test2}>Test2</button>
         </div>
