@@ -1,13 +1,15 @@
 import dotProp from 'dot-prop-immutable';
 
-import { GET_ARTIST, GET_INPUT, GET_ALBUMS } from '../actions/actions';
+import { GET_ARTIST, GET_INPUT, GET_ALBUMS, GET_TRACKS } from '../actions/actions';
 
 const INITIAL_STATE = {
   artist: [],
   albums: [],
+  tracks: [],
   searchValue: '',
   receivedArtist: false,
-  receivedAlbums: false
+  receivedAlbums: false,
+  receivedTracks: false
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -20,6 +22,11 @@ export default function(state = INITIAL_STATE, action) {
     case GET_ALBUMS:
       state = dotProp.set(state, 'albums', action.payload.data);
       state = dotProp.set(state, 'receivedAlbums', true);
+      console.log(state);
+      return state;
+    case GET_TRACKS:
+      state = dotProp.set(state, 'tracks', action.payload.data);
+      state = dotProp.set(state, 'receivedTracks', true);
       console.log(state);
       return state;
     case GET_INPUT:

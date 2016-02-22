@@ -2,16 +2,6 @@ import React, { Component } from 'react';
 
 export default class AlbumImages extends Component {
 
-  constructor() {
-    super();
-
-    this.test = this.test.bind(this);
-  }
-
-  test() {
-    console.log(this.props.albumData.albums.items);
-  }
-
   render() {
 
     const { albumData } = this.props;
@@ -29,16 +19,11 @@ export default class AlbumImages extends Component {
         );
       }
     });
-    //Filter array for repeated album names here
-
-    //
+    //Filter array for repeated album names here//
     return (
       <div>
         {albumImages}
-        <button onClick={this.test}>Test</button>
       </div>
     );
   }
 }
-
-export default AlbumImages;

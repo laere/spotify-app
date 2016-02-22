@@ -4,16 +4,19 @@ import { connect } from 'react-redux';
 import Searchbar from '../components/Searchbar';
 import DisplayArtistInfo from '../components/DisplayArtistInfo';
 import AlbumImages from '../components/AlbumImages';
+import ArtistTracks from '../components/ArtistTracks';
 //Actions
-import { getArtist, getInput, getAlbums } from '../actions/actions';
+import { getArtist, getInput, getAlbums, getTracks } from '../actions/actions';
 
 class App extends Component {
 
   render() {
+
     const {
             getInput, getArtist, getAlbums,
             searchValue, artist, albums,
-            receivedArtist, receivedAlbums
+            receivedArtist, receivedAlbums, tracks,
+            receivedTracks, getTracks
 
           } = this.props;
 
@@ -23,6 +26,7 @@ class App extends Component {
           getInput={getInput}
           getArtist={getArtist}
           getAlbums={getAlbums}
+          getTracks={getTracks}
           searchValue={searchValue}
         />
         {/*Wait for user to search*/}
@@ -34,7 +38,11 @@ class App extends Component {
           ? <AlbumImages albumData={albums} />
           : <h1>Waiting for Album data....</h1>
         }
-        
+        {receivedTracks
+          ? <ArtistTracks trackData={tracks}/>
+          : <h1>Waiting for Track data....</h1>
+        }
+
       </div>
     );
   }
@@ -44,10 +52,12 @@ const mapStateToProps = (state) => {
   return ({
     artist: state.artist,
     albums: state.albums,
+    tracks: state.tracks,
     searchValue: state.searchValue,
     receivedArtist: state.receivedArtist,
-    receivedAlbums: state.receivedAlbums
+    receivedAlbums: state.receivedAlbums,
+    receivedTracks: state.receivedTracks,
   });
 }
 
-export default connect(mapStateToProps, { getArtist, getInput, getAlbums } )(App);
+export default connect(mapStateToProps, { getArtist, getInput, getAlbums, getTracks } )(App);

@@ -16,12 +16,13 @@ export default class Searchbar extends Component {
 
   handleOnSubmit(e) {
     e.preventDefault();
-    const { searchValue, getArtist, getAlbums } = this.props;
+    const { searchValue, getArtist, getAlbums, getTracks } = this.props;
 
     if(searchValue === '') return;
-    
+
     getArtist(searchValue);
     getAlbums(searchValue);
+    getTracks(searchValue);
   }
 
   render() {
