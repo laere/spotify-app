@@ -15,19 +15,18 @@ export default class AlbumImages extends Component {
   render() {
 
     const { albumData } = this.props;
+
     const albumArray = albumData.albums.items;
-
     const albumImages = albumArray.map((album, index) => {
-    if(index < 5) {
-      return (
-        <div>
-          <div>{album.name}</div>
-          <img src={album.images[0].url} key={index} />
-        </div>
-      );
-    }
-  });
-
+      if(index < 5) {
+        return (
+          <div>
+            <div>{album.name}</div>
+            <img src={album.images[0].url} key={index} />
+          </div>
+        );
+      }
+    });
     return (
       <div>
         {albumImages}
@@ -36,7 +35,5 @@ export default class AlbumImages extends Component {
     );
   }
 }
-
-
 
 export default AlbumImages;

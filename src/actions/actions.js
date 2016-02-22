@@ -14,34 +14,34 @@ export const getArtist = (searchValue) => {
   return (dispatch, getState) => {
     const request = axios.get(`${BASE_URL}?q=${searchValue}&type=artist`);
 
-      request.then(function(response) {
-        console.log(response);
-        dispatch({
-          type: GET_ARTIST,
-          payload: request
-        });
+    request.then(function(response) {
+      console.log(response);
+      dispatch({
+        type: GET_ARTIST,
+        payload: request
+      });
 
-        }, function(err) {
-            console.log('Error loading data');
-        });
-    };
+    }, function(err) {
+      console.log('Error loading data');
+    });
+  };
 };
 
 // ALBUMS
 export const getAlbums = (searchValue) => {
   return (dispatch, getState) => {
     const request = axios.get(`${BASE_URL}?q=${searchValue}&type=album`);
-
-      request.then(function(response) {
-        console.log(response);
-        dispatch({
-          type: GET_ALBUMS,
-          payload: request
-        });
-
-      }, function(err) {
-          console.log('Error loading data');
+    
+    request.then(function(response) {
+      console.log(response);
+      dispatch({
+        type: GET_ALBUMS,
+        payload: request
       });
+
+    }, function(err) {
+      console.log('Error loading data');
+    });
   };
 };
 

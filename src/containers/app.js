@@ -7,7 +7,6 @@ import AlbumImages from '../components/AlbumImages';
 //Actions
 import { getArtist, getInput, getAlbums } from '../actions/actions';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -15,7 +14,9 @@ class App extends Component {
 
   render() {
 
-    const { getInput, getArtist, getAlbums, searchValue, artist, albums, receivedArtist, receivedAlbums } = this.props;
+    const { getInput, getArtist, getAlbums,
+            searchValue, artist, albums,
+            receivedArtist, receivedAlbums } = this.props;
 
     return (
       <div>
@@ -48,8 +49,7 @@ const mapStateToProps = (state) => {
     searchValue: state.searchValue,
     receivedArtist: state.receivedArtist,
     receivedAlbums: state.receivedAlbums
-  })
+  });
 }
-
 
 export default connect(mapStateToProps, { getArtist, getInput, getAlbums } )(App);
