@@ -12,19 +12,19 @@ const BASE_URL = 'https://api.spotify.com/v1/search';
 export const getArtist = (searchValue) => {
 
   return (dispatch, getState) => {
-  const request = axios.get(`${BASE_URL}?q=${searchValue}&type=artist`);
+    const request = axios.get(`${BASE_URL}?q=${searchValue}&type=artist`);
 
-    request.then(function(response) {
-      console.log(response);
-      dispatch({
-        type: GET_ARTIST,
-        payload: request
-      });
+      request.then(function(response) {
+        console.log(response);
+        dispatch({
+          type: GET_ARTIST,
+          payload: request
+        });
 
-      }, function(err) {
-        console.log('Error loading data');
-      });
-  };
+        }, function(err) {
+          console.log('Error loading data');
+        });
+    };
 };
 
 export const getInput = (input) => {

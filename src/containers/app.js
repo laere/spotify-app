@@ -1,5 +1,4 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //Child Components
 import Searchbar from '../components/Searchbar';
@@ -9,14 +8,13 @@ import { getArtist, getInput } from '../actions/actions';
 
 
 class App extends Component {
-
   constructor() {
     super();
   }
 
   render() {
 
-    const { getInput, getArtist, searchValue, artist } = this.props;
+    const { getInput, getArtist, searchValue, artist, received } = this.props;
 
     return (
       <div>
@@ -25,10 +23,11 @@ class App extends Component {
           getArtist={getArtist}
           searchValue={searchValue}
         />
-        <List
-          artistData={artist}
-          getArtist={getArtist}
-        />
+
+      {received
+        ? <List artistData={artist}  getArtist={getArtist} />
+      : <h1>Waiting for data....</h1>
+      }
       </div>
     );
   }
@@ -37,8 +36,10 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return ({
     artist: state.artist,
-    searchValue: state.searchValue
+    searchValue: state.searchValue,
+    received: state.received
   })
 }
+
 
 export default connect(mapStateToProps, { getArtist, getInput } )(App);

@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+export default class ListItem extends Component {
+  
+  render() {
 
-const ListItem = () => {
-  <div>
-    <img src={this.props.img} />
-  </div>
+    const { name, genres, image } = this.props;
+
+    return (
+      <div>
+        <div>{name}</div>
+        <div>{genres}</div>
+        <img src={image} />
+      </div>
+    );
+  }
 }
-
-export default ListItem;

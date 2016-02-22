@@ -1,5 +1,4 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 export default class Searchbar extends Component {
 
@@ -11,6 +10,7 @@ export default class Searchbar extends Component {
   }
 
   handleOnChange(e) {
+
     const { getInput } = this.props;
 
     this.props.getInput(e.target.value);
@@ -22,7 +22,7 @@ export default class Searchbar extends Component {
     const { searchValue, getArtist } = this.props;
 
     if(searchValue === '') return;
-    
+
     getArtist(searchValue);
   }
 
@@ -32,6 +32,7 @@ export default class Searchbar extends Component {
         <form onSubmit={this.handleOnSubmit}>
           <input type="text" onChange={this.handleOnChange}/>
           <button>Search</button>
+          <button></button>
         </form>
       </div>
     );
