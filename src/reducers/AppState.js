@@ -6,18 +6,20 @@ const INITIAL_STATE = {
   artist: [],
   albums: [],
   searchValue: '',
-  received: false
+  receivedArtist: false,
+  receivedAlbums: false
 };
 
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
     case GET_ARTIST:
       state = dotProp.set(state, 'artist', action.payload.data.artists.items[0]);
-      state = dotProp.set(state, 'received', true);
+      state = dotProp.set(state, 'receivedArtist', true);
       console.log(state);
       return state;
     case GET_ALBUMS:
       state = dotProp.set(state, 'albums', action.payload.data);
+      state = dotProp.set(state, 'receivedAlbums', true);
       console.log(state);
       return state;
     case GET_INPUT:

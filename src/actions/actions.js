@@ -8,7 +8,7 @@ export const GET_ALBUMS = 'GET_ALBUMS';
 //other constants
 const BASE_URL = 'https://api.spotify.com/v1/search';
 
-  //make sure to add query eventually
+// ARTISTS
 export const getArtist = (searchValue) => {
 
   return (dispatch, getState) => {
@@ -27,6 +27,7 @@ export const getArtist = (searchValue) => {
     };
 };
 
+// ALBUMS
 export const getAlbums = (searchValue) => {
   return (dispatch, getState) => {
     const request = axios.get(`${BASE_URL}?q=${searchValue}&type=album`);
@@ -44,6 +45,7 @@ export const getAlbums = (searchValue) => {
   };
 };
 
+// SEARCH INPUT
 export const getInput = (input) => {
   return {
     type: GET_INPUT,

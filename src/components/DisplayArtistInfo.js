@@ -7,23 +7,25 @@ export default class DisplayArtistInfo extends Component {
   constructor() {
     super();
 
-    this.test2 = this.test2.bind(this);
+    // this.test2 = this.test2.bind(this);
   }
 
-  test2() {
-    const { artistData } = this.props;
-    // console.log(artistData.genres[0]);
-    console.log(artistData.genres);
-  }
+  // test2() {
+  //   const { artistData } = this.props;
+  //   // console.log(artistData.genres[0]);
+  //   console.log(artistData.genres);
+  // }
+
+  i
 
   render() {
 
     const { artistData } = this.props;
 
-    const artistImage = artistData.images[1].url;
-    const artistGenres = artistData.genres.map((genre, index) => {
-      return <div key={index}>{genre}</div>
-    });
+      const artistImage = artistData.images[1].url;
+      const artistGenres = artistData.genres.map((genre, index) => {
+        return <div key={index}>{genre}</div>
+      });
 
       return (
         <div>
@@ -31,7 +33,7 @@ export default class DisplayArtistInfo extends Component {
           <div>Genres: {artistGenres}</div>
           <div>Followers: {artistData.followers.total}</div>
           <img src={artistImage} />
-          <button onClick={this.test2}>Test2</button>
+          {/*<button onClick={this.test2}>Test2</button>*/}
         </div>
       );
   }

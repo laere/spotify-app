@@ -15,7 +15,7 @@ class App extends Component {
 
   render() {
 
-    const { getInput, getArtist, getAlbums, searchValue, artist, received } = this.props;
+    const { getInput, getArtist, getAlbums, searchValue, artist, albums, receivedArtist, receivedAlbums } = this.props;
 
     return (
       <div>
@@ -27,9 +27,13 @@ class App extends Component {
           searchValue={searchValue}
         />
         {/*Wait for user to search*/}
-        {receive
-          ? <div><DisplayArtistInfo artistData={artist} /><AlbumImages /></div>
-          : <h1>Waiting for data....</h1>
+        {receivedArtist
+          ? <DisplayArtistInfo artistData={artist} />
+          : <h1>Waiting for Artist data....</h1>
+        }
+        {receivedAlbums
+          ? <AlbumImages albumData={albums} />
+          : <h1>Waiting for Album data....</h1>
         }
 
       </div>
@@ -40,8 +44,10 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return ({
     artist: state.artist,
+    albums: state.albums,
     searchValue: state.searchValue,
-    received: state.received
+    receivedArtist: state.receivedArtist,
+    receivedAlbums: state.receivedAlbums
   })
 }
 
