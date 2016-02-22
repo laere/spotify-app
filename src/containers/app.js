@@ -18,16 +18,18 @@ class App extends Component {
 
     return (
       <div>
+
         <Searchbar
           getInput={getInput}
           getArtist={getArtist}
           searchValue={searchValue}
         />
 
-      {received
-        ? <List artistData={artist}  getArtist={getArtist} />
-      : <h1>Waiting for data....</h1>
-      }
+        {received
+          ? <List artistData={artist} />
+          : <h1>Waiting for data....</h1>
+        }
+
       </div>
     );
   }
