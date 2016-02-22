@@ -18,7 +18,9 @@ export default class DisplayArtistInfo extends Component {
           <div>Name:  {artistData.name}</div>
           <div>Genres: {artistGenres}</div>
           <div>Followers: {artistData.followers.total}</div>
-          <img src={artistImage} alt="image of the artist"/>
+          <a href={artistData.external_urls.spotify}>
+            <img src={artistImage} alt="image of the artist"/>
+          </a>
         </div>
       );
   }

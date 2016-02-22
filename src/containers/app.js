@@ -8,19 +8,17 @@ import AlbumImages from '../components/AlbumImages';
 import { getArtist, getInput, getAlbums } from '../actions/actions';
 
 class App extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
-
-    const { getInput, getArtist, getAlbums,
+    const {
+            getInput, getArtist, getAlbums,
             searchValue, artist, albums,
-            receivedArtist, receivedAlbums } = this.props;
+            receivedArtist, receivedAlbums
+
+          } = this.props;
 
     return (
       <div>
-
         <Searchbar
           getInput={getInput}
           getArtist={getArtist}
@@ -36,7 +34,7 @@ class App extends Component {
           ? <AlbumImages albumData={albums} />
           : <h1>Waiting for Album data....</h1>
         }
-
+        
       </div>
     );
   }
