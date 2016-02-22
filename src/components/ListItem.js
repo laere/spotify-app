@@ -4,13 +4,11 @@ export default class ListItem extends Component {
 
   render() {
 
-    const { name, genres, image } = this.props;
+    const { name } = this.props;
 
     return (
       <div>
         <div>{name}</div>
-        <div>{genres}</div>
-        <img src={image} />
       </div>
     );
   }
