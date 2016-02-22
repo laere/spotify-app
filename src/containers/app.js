@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 //Child Components
 import Searchbar from '../components/Searchbar';
-import List from '../components/List';
+import DisplayArtistInfo from '../components/DisplayArtistInfo';
 //Actions
 import { getArtist, getInput } from '../actions/actions';
 
@@ -18,7 +18,6 @@ class App extends Component {
 
     return (
       <div>
-
         <Searchbar
           getInput={getInput}
           getArtist={getArtist}
@@ -26,10 +25,9 @@ class App extends Component {
         />
 
         {received
-          ? <List artistData={artist} />
+          ? <DisplayArtistInfo artistData={artist} />
           : <h1>Waiting for data....</h1>
         }
-
       </div>
     );
   }

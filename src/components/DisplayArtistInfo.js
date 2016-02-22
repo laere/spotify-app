@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ListItem from './ListItem';
-import ArtistImages from './ArtistImages';
+// import ListItem from './ListItem';
 
-export default class List extends Component {
+export default class DisplayArtistInfo extends Component {
 
   constructor() {
     super();
@@ -27,9 +26,7 @@ export default class List extends Component {
 
       return (
         <div>
-          <div>Name:
-            <ListItem name={artistData.name} />
-          </div>
+          <div>Name:  {artistData.name}</div>
           <div>Genres: {artistGenres}</div>
           <img src={artistImage} />
           <button onClick={this.test2}>Test2</button>
