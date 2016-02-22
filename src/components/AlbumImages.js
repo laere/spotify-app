@@ -18,8 +18,15 @@ export default class AlbumImages extends Component {
     const albumArray = albumData.albums.items;
 
     const albumImages = albumArray.map((album, index) => {
-      return <img src={album.images[0].url} key={index} />
-    });
+    if(index < 5) {
+      return (
+        <div>
+          <div>{album.name}</div>
+          <img src={album.images[0].url} key={index} />
+        </div>
+      );
+    }
+  });
 
     return (
       <div>
