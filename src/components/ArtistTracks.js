@@ -10,7 +10,7 @@ export default class ArtistTracks extends Component {
       if(index <= 4) {
           return (
               <div key={index}>
-                <a href={track.preview_url}>{track.name}</a>
+                <a href={track.preview_url} target="_blank">{track.name}</a>
               </div>
           );
         }

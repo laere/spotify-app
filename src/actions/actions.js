@@ -80,7 +80,6 @@ export const clearInput = () => {
   }
 }
 
-
 // export const actionCreators = {
 //   getArtist: getArtist,
 //   getAlbums: getAlbums,

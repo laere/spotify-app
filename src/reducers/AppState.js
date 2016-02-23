@@ -1,5 +1,4 @@
 import dotProp from 'dot-prop-immutable';
-import { LOAD } from 'redux-storage';
 // ACTIONS
 import {
   GET_ARTIST,
@@ -17,8 +16,7 @@ const INITIAL_STATE = {
   searchValue: '',
   receivedArtist: false,
   receivedAlbums: false,
-  receivedTracks: false,
-  loaded: false
+  receivedTracks: false
 };
 
 // REDUCER
@@ -47,9 +45,6 @@ export default function (state = INITIAL_STATE, action) {
     state = dotProp.set(state, 'searchValue', action.payload);
     console.log(state);
     return state;
-  case LOAD:
-    console.log(state);
-    return { ...state, loaded: true }
   default:
     return state;
   }
