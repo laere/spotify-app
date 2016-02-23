@@ -4,8 +4,10 @@ export default class Searchbar extends Component {
 
   constructor() {
     super()
+
     this.handleOnChange = this.handleOnChange.bind(this);
     this.handleOnSubmit = this.handleOnSubmit.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
   handleOnChange(e) {
@@ -15,6 +17,7 @@ export default class Searchbar extends Component {
   }
 
   handleOnSubmit(e) {
+
     e.preventDefault();
     const { searchValue, getArtist, getAlbums, getTracks } = this.props;
 
@@ -25,12 +28,18 @@ export default class Searchbar extends Component {
     getTracks(searchValue);
   }
 
+  clear() {
+    const { searchValue } = this.props;
+    searchValue === '';
+  }
+
   render() {
     return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
           <input type="text" onChange={this.handleOnChange}/>
           <button>Search</button>
+          <button onClick={this.clear}>Clear</button>
         </form>
       </div>
     );

@@ -10,7 +10,6 @@ import App from './containers/app';
 import AppState from './reducers/AppState';
 
 const createStoreWithMiddleware = applyMiddleware(Thunk, Promise)(createStore);
-console.log(createStoreWithMiddleware);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(AppState)}>

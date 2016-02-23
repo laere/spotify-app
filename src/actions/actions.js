@@ -5,9 +5,13 @@ export const GET_ARTIST = 'GET_ARTIST';
 export const GET_INPUT = 'GET_INPUT';
 export const GET_ALBUMS = 'GET_ALBUMS';
 export const GET_TRACKS = 'GET_TRACKS';
+export const CLEAR_INPUT = 'CLEAR_INPUT';
 
 //other constants
 const BASE_URL = 'https://api.spotify.com/v1/search';
+
+
+//TURN THIS INTO A SINGLE PURE FUNCTION??//
 
 // ARTISTS
 export const getArtist = (searchValue) => {
@@ -68,5 +72,12 @@ export const getInput = (input) => {
   return {
     type: GET_INPUT,
     payload: input
+  }
+}
+
+export const clearInput = () => {
+  return {
+    type: CLEAR_INPUT,
+    payload
   }
 }

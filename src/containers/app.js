@@ -30,17 +30,19 @@ class App extends Component {
           searchValue={searchValue}
         />
         {/*Wait for user to search*/}
+        {/*Find a better way to do this
+        if all 3 stat arrs.length <= 0 then run a loading data func*/}
         {receivedArtist
           ? <DisplayArtistInfo artistData={artist} />
           : <h1>Waiting for Artist data....</h1>
         }
-        {receivedAlbums
-          ? <AlbumImages albumData={albums} />
-          : <h1>Waiting for Album data....</h1>
-        }
         {receivedTracks
           ? <ArtistTracks trackData={tracks}/>
           : <h1>Waiting for Track data....</h1>
+        }
+        {receivedAlbums
+          ? <AlbumImages albumData={albums} />
+          : <h1>Waiting for Album data....</h1>
         }
 
       </div>

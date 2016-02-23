@@ -6,9 +6,9 @@ export default class AlbumImages extends Component {
 
     const { albumData } = this.props;
 
-    const albumArray = albumData.albums.items;
-    const albumImages = albumArray.map((album, index) => {
-      if(index <= 4) {
+    const albumImages = albumData.albums.items.map((album, index) => {
+      //load first 5
+      if(index <= 5) {
         return (
           <div key={index}>
             <h3>{album.name}</h3>
@@ -19,7 +19,11 @@ export default class AlbumImages extends Component {
         );
       }
     });
-    //Filter array for repeated album names here//
+    // Filter array for repeated album names here
+    // Pseudo Code
+    // array.filter((ele, index) => {
+    //   return array.indexOf(ele) === index;
+    // });
     return (
       <div>
         {albumImages}

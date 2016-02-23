@@ -1,6 +1,6 @@
 import dotProp from 'dot-prop-immutable';
 
-import { GET_ARTIST, GET_INPUT, GET_ALBUMS, GET_TRACKS } from '../actions/actions';
+import { GET_ARTIST, GET_INPUT, GET_ALBUMS, GET_TRACKS, CLEAR_INPUT } from '../actions/actions';
 
 const INITIAL_STATE = {
   artist: [],
@@ -32,6 +32,9 @@ export default function(state = INITIAL_STATE, action) {
     case GET_INPUT:
       state = dotProp.set(state, 'searchValue', action.payload);
       console.log(state);
+      return state;
+    case CLEAR_INPUT:
+      state = dotProp.set(state, 'searchValue', action.payload)
       return state;
     default:
       return state;
