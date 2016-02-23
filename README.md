@@ -11,7 +11,7 @@ Using the Spotify API as a single source of truth.
 **Grabbing data:** <a href="https://github.com/mzabriskie/axios">axios</a>.
 
 
-<h1>Things to do:<h1>
+<h1>Things to do:</h1>
 
 Add local storage for user searches.
 
