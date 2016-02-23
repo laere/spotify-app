@@ -6,7 +6,7 @@ import DisplayArtistInfo from '../components/DisplayArtistInfo';
 import AlbumImages from '../components/AlbumImages';
 import ArtistTracks from '../components/ArtistTracks';
 //Actions
-import { getArtist, getInput, getAlbums, getTracks } from '../actions/actions';
+import { getArtist, getInput, getAlbums, getTracks, clearInput } from '../actions/actions';
 
 class App extends Component {
 
@@ -16,7 +16,7 @@ class App extends Component {
             getInput, getArtist, getAlbums,
             searchValue, artist, albums,
             receivedArtist, receivedAlbums, tracks,
-            receivedTracks, getTracks
+            receivedTracks, getTracks, clearInput
 
           } = this.props;
 
@@ -28,6 +28,7 @@ class App extends Component {
           getAlbums={getAlbums}
           getTracks={getTracks}
           searchValue={searchValue}
+          clearInput={clearInput}
         />
         {/*Wait for user to search*/}
         {/*Find a better way to do this
@@ -62,4 +63,4 @@ const mapStateToProps = (state) => {
   });
 }
 
-export default connect(mapStateToProps, { getArtist, getInput, getAlbums, getTracks } )(App);
+export default connect(mapStateToProps, { getArtist, getInput, getAlbums, getTracks, clearInput } )(App);

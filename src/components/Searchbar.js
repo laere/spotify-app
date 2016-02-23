@@ -29,15 +29,16 @@ export default class Searchbar extends Component {
   }
 
   clear() {
-    const { searchValue } = this.props;
-    searchValue === '';
+    const { searchValue, clearInput } = this.props;
+    clearInput(searchValue)
   }
 
   render() {
+    const { searchValue } = this.props;
     return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
-          <input type="text" onChange={this.handleOnChange}/>
+          <input type="text" onChange={this.handleOnChange} value={searchValue}/>
           <button>Search</button>
           <button onClick={this.clear}>Clear</button>
         </form>

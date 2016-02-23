@@ -34,7 +34,8 @@ export default function(state = INITIAL_STATE, action) {
       console.log(state);
       return state;
     case CLEAR_INPUT:
-      state = dotProp.set(state, 'searchValue', action.payload)
+      state = dotProp.set(state, 'searchValue', action.payload);
+      console.log(state);
       return state;
     default:
       return state;

@@ -78,6 +78,6 @@ export const getInput = (input) => {
 export const clearInput = () => {
   return {
     type: CLEAR_INPUT,
-    payload
+    payload: ''
   }
 }
