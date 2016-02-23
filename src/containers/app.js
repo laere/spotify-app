@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//Child Components
+//  Child Components
 import Searchbar from '../components/Searchbar';
 import DisplayArtistInfo from '../components/DisplayArtistInfo';
 import AlbumImages from '../components/AlbumImages';
 import ArtistTracks from '../components/ArtistTracks';
-//Actions
+//  Actions
 import { getArtist, getInput, getAlbums, getTracks, clearInput } from '../actions/actions';
 
 class App extends Component {
@@ -45,7 +45,6 @@ class App extends Component {
           ? <AlbumImages albumData={albums} />
           : <h1>Waiting for Album data....</h1>
         }
-
       </div>
     );
   }

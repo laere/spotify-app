@@ -10,9 +10,7 @@ export const CLEAR_INPUT = 'CLEAR_INPUT';
 //other constants
 const BASE_URL = 'https://api.spotify.com/v1/search';
 
-
 //TURN THIS INTO A SINGLE PURE FUNCTION??//
-
 // ARTISTS
 export const getArtist = (searchValue) => {
 
@@ -27,7 +25,7 @@ export const getArtist = (searchValue) => {
       });
 
     }, function(err) {
-      console.log('Error loading data');
+        console.log('Error loading data');
     });
   };
 };
@@ -45,7 +43,7 @@ export const getAlbums = (searchValue) => {
       });
 
     }, function(err) {
-      console.log('Error loading data');
+        console.log('Error loading data');
     });
   };
 };
@@ -62,7 +60,7 @@ export const getTracks = (searchValue) => {
       });
 
     }, function(err) {
-      console.log('Error loading data');
+        console.log('Error loading data');
     });
   };
 };
@@ -81,3 +79,12 @@ export const clearInput = () => {
     payload: ''
   }
 }
+
+
+// export const actionCreators = {
+//   getArtist: getArtist,
+//   getAlbums: getAlbums,
+//   getTracks: getTracks,
+//   getInput: getInput,
+//   clearInput: clearInput
+// }
