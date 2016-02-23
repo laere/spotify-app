@@ -6,7 +6,17 @@ Using the Spotify API as a single source of truth.
 
 **Middleware (in order):** <a href="https://github.com/gaearon/redux-thunk">redux-thunk</a>, <a href="https://github.com/pburtchaell/redux-promise-middleware">redux-promise-middleware</a>.
 
-**Immutable data:** <a href="https://github.com/facebook/immutable-js">immutable.js</a>.
+**Immutable data:** dot-prop-immutable.
 
 **Grabbing data:** <a href="https://github.com/mzabriskie/axios">axios</a>.
 
+
+<h1>Things to do:<h1>
+
+Add local storage for user searches.
+
+Possibly add OAUTH, and other features.
+
+When a use enters a improper name, update state back to default.
+
+Add styling.
