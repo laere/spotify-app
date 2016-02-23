@@ -1,4 +1,5 @@
 import dotProp from 'dot-prop-immutable';
+import localstorage from 'putainde-localstorage';
 
 import { GET_ARTIST, GET_INPUT, GET_ALBUMS, GET_TRACKS, CLEAR_INPUT } from '../actions/actions';
 

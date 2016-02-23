@@ -35,12 +35,15 @@ export default class Searchbar extends Component {
 
   render() {
     const { searchValue } = this.props;
+
     return (
       <div>
-        <form onSubmit={this.handleOnSubmit}>
-          <input type="text" onChange={this.handleOnChange} value={searchValue}/>
-          <button>Search</button>
-          <button onClick={this.clear}>Clear</button>
+        <form onSubmit={this.handleOnSubmit} className="form-inline">
+          <div className="form-group">
+            <input className="form-control" type="text" onChange={this.handleOnChange} value={searchValue} placeholder="Search your for your favorite artist..."/>
+            <button className="btn btn-primary" role="button">Search</button>
+            <button className="btn btn-default" role="button" onClick={this.clear}>Clear</button>
+          </div>
         </form>
       </div>
     );

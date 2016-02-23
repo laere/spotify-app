@@ -23,6 +23,7 @@
     "babel-preset-stage-1": "^6.1.18",
     "dot-prop-immutable": "^1.1.2",
     "lodash": "^3.10.1",
+    "putainde-localstorage": "^4.0.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",

@@ -10,10 +10,10 @@ export default class AlbumImages extends Component {
       //load first 5
       if(index <= 5) {
         return (
-          <div key={index}>
+          <div key={index} className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <h3>{album.name}</h3>
             <a href={album.external_urls.spotify}>
-              <img src={album.images[0].url} alt="artist album images"/>
+              <img src={album.images[0].url} alt="artist album images" style={{maxWidth: "100%"}}/>
             </a>
           </div>
         );
