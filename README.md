@@ -17,6 +17,9 @@ Add local storage for user searches.
 
 Possibly add OAUTH, and other features.
 
-When a use enters a improper name, update state back to default.
+When a use enters an improper name, update state back to default.
 
 Add styling.
+
+
+<h2>All rights reserved to spotify and the use of their API</h2>
