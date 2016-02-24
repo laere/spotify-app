@@ -11,9 +11,7 @@ export default class ArtistTracks extends Component {
           return (
               <div key={index} className="col-lg-6 col-md-6 col-sm-12 col-xs-12 songs">
                 <a href={track.preview_url} target="_blank">
-                  <div>
                     {track.name}
-                  </div>
                 </a>
               </div>
           );
@@ -22,7 +20,7 @@ export default class ArtistTracks extends Component {
 
     return (
     <div className="songPreviews">
-      <h2 classname="songPreviews-Heading">Song Previews:</h2>
+      <h2 className="songPreviews-Heading">Song Previews:</h2>
       <div>{artistTracks}</div>
     </div>
     );

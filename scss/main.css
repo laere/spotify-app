@@ -8,21 +8,25 @@ html {
 body {
   background-color: #222;
   color: #fff;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.5;
   letter-spacing: 1; }
 
 a {
   color: #fff; }
 
+h1, h2, h3 {
+  font-size: 3rem; }
+
 .container {
   background-color: #333;
   border-left: 5px solid #181818;
-  padding: 16px; }
+  padding: 32px; }
   .container .navBar {
     width: 100%;
     padding: 16px;
-    margin-bottom: 32px;
+    padding-top: 64px;
+    margin-bottom: 24px;
     width: 100%; }
     .container .navBar .navBarInput {
       background-color: #363636;
@@ -47,8 +51,7 @@ a {
         color: #fff;
         border-color: #fff; }
   .container .artistInfo {
-    padding: 24px;
-    margin-bottom: 48px; }
+    margin-bottom: 64px; }
     .container .artistInfo .artistInfo-Labels {
       position: absolute;
       bottom: 0;
@@ -64,8 +67,16 @@ a {
       .container .artistInfo .artistInfo-Image img {
         width: 100%; }
   .container .songPreviews {
-    background-color: red; }
+    border-bottom: 1px solid #fff; }
+    .container .songPreviews .songPreviews-Heading {
+      padding-bottom: 20px; }
+    .container .songPreviews .songs {
+      margin: 4px 0; }
+      .container .songPreviews .songs a:hover {
+        color: #FF7B39; }
+      .container .songPreviews .songs:nth-child(1), .container .songPreviews .songs:nth-child(2) {
+        padding-top: 32px; }
   .container .albumImages {
-    padding-top: 32px; }
+    padding-top: 64px; }
 
 /*# sourceMappingURL=main.css.map */

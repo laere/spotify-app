@@ -15,7 +15,7 @@ html {
 body {
   background-color: #222;
   color: $white;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.5;
   letter-spacing: 1;
 }
@@ -24,18 +24,23 @@ a {
   color: $white;
 }
 
+h1,h2,h3 {
+  font-size: 3rem;
+}
+
 // MAIN STYLES
 
 .container {
   background-color: #333;
   border-left: 5px solid #181818;
-  padding: 16px;
+  padding: 32px;
 
   // NAVBAR
   .navBar {
     width: 100%;
     padding: 16px;
-    margin-bottom: 32px;
+    padding-top: 64px;
+    margin-bottom: 24px;
     width: 100%;
 
     .navBarInput {
@@ -70,8 +75,7 @@ a {
 
   // ARTIST INFO
   .artistInfo {
-    padding: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
 
     .artistInfo-Labels {
       position: absolute;
@@ -96,19 +100,28 @@ a {
 
   // SONG PREVIEWS
   .songPreviews {
-    background-color: red;
+
+    border-bottom: 1px solid $white;
+
     .songPreviews-Heading {
-
+      padding-bottom: 20px;
     }
 
-    .songs {
-      
+    .songs  {
+      margin: 4px 0;
+      a:hover {
+        color: $orange;
+      }
+      &:nth-child(1), &:nth-child(2) {
+        padding-top: 32px;
+      }
     }
+
   }
 
   // ALBUM IMAGES
   .albumImages {
-    padding-top: 32px;
+    padding-top: 64px;
   }
 
 }

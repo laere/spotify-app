@@ -10,7 +10,7 @@ export default class AlbumImages extends Component {
       //load first 5
       if(index <= 5) {
         return (
-          <div key={index} className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div key={index} className="col-lg-6 col-md-6 col-sm-12 col-xs-12 albumImages">
             <h3>{album.name}</h3>
             <a href={album.external_urls.spotify} target="_blank">
               <img src={album.images[0].url} alt="artist album images" style={{maxWidth: "100%"}}/>
@@ -25,7 +25,7 @@ export default class AlbumImages extends Component {
     //   return array.indexOf(ele) === index;
     // });
     return (
-      <div className="albumImages">
+      <div>
         {albumImages}
       </div>
     );
