@@ -7,9 +7,9 @@ export default class ArtistTracks extends Component {
     const { trackData } = this.props;
 
     const artistTracks = trackData.tracks.items.map((track, index) => {
-      if(index <= 4) {
+      if(index <= 9) {
           return (
-              <div key={index}>
+              <div key={index} className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <a href={track.preview_url} target="_blank">{track.name}</a>
               </div>
           );
