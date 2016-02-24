@@ -1,0 +1,21 @@
+@import '_normalize';
+@import '_colors_mixins';
+@import '_variables';
+@import 'bootstrap-grid';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5% //1rem = 10px;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: $white;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 1;
+}

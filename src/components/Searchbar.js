@@ -30,7 +30,7 @@ export default class Searchbar extends Component {
 
   clear() {
     const { searchValue, clearInput } = this.props;
-    clearInput(searchValue)
+    clearInput()
   }
 
   render() {
