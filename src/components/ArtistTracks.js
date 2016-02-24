@@ -10,9 +10,11 @@ export default class ArtistTracks extends Component {
       if(index <= 9) {
           return (
               <div key={index} className="col-lg-6 col-md-6 col-sm-12 col-xs-12 songs">
-                <a href={track.preview_url} target="_blank">
-                    {track.name}
-                </a>
+                <i className="fa fa-music">
+                  <a href={track.preview_url} target="_blank">
+                      {track.name}
+                  </a>
+                </i>
               </div>
           );
         }
