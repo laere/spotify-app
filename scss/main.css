@@ -12,14 +12,60 @@ body {
   line-height: 1.5;
   letter-spacing: 1; }
 
+a {
+  color: #fff; }
+
 .container {
   background-color: #333;
-  border-left: 10px solid #181818;
+  border-left: 5px solid #181818;
   padding: 16px; }
   .container .navBar {
-    background-color: #222;
     width: 100%;
     padding: 16px;
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    width: 100%; }
+    .container .navBar .navBarInput {
+      background-color: #363636;
+      border: 1px solid #fff;
+      color: #aaa;
+      padding: 8px;
+      margin-right: 8px;
+      width: 75%; }
+      .container .navBar .navBarInput:focus {
+        outline: none;
+        background-color: #444; }
+    .container .navBar .navBarButton {
+      border: 1px solid #FF7B39;
+      color: #FF7B39;
+      padding: 8px;
+      margin-right: 8px;
+      width: 10%;
+      border-radius: 4px;
+      background-color: #333; }
+      .container .navBar .navBarButton:hover {
+        background-color: #FF7B39;
+        color: #fff;
+        border-color: #fff; }
+  .container .artistInfo {
+    padding: 24px;
+    margin-bottom: 48px; }
+    .container .artistInfo .artistInfo-Labels {
+      position: absolute;
+      bottom: 0;
+      padding: 16px;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%; }
+      .container .artistInfo .artistInfo-Labels div {
+        display: inline-block;
+        margin-right: 16px; }
+    .container .artistInfo .artistInfo-Image {
+      padding-top: 32px;
+      position: relative; }
+      .container .artistInfo .artistInfo-Image img {
+        width: 100%; }
+  .container .songPreviews {
+    background-color: red; }
+  .container .albumImages {
+    padding-top: 32px; }
 
 /*# sourceMappingURL=main.css.map */

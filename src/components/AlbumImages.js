@@ -25,7 +25,7 @@ export default class AlbumImages extends Component {
     //   return array.indexOf(ele) === index;
     // });
     return (
-      <div>
+      <div className="albumImages">
         {albumImages}
       </div>
     );

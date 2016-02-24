@@ -20,34 +20,95 @@ body {
   letter-spacing: 1;
 }
 
+a {
+  color: $white;
+}
+
 // MAIN STYLES
 
 .container {
   background-color: #333;
-  border-left: 10px solid #181818;
+  border-left: 5px solid #181818;
   padding: 16px;
+
   // NAVBAR
   .navBar {
-    background-color: #222;
     width: 100%;
     padding: 16px;
     margin-bottom: 32px;
+    width: 100%;
 
     .navBarInput {
-
+      background-color: #363636;
+      border: 1px solid $white;
+      color: #aaa;
+      padding: 8px;
+      margin-right: 8px;
+      width: 75%;
+      &:focus {
+        outline: none;
+        background-color: #444;
+      }
     }
 
     .navBarButton {
+      border: 1px solid $orange;
+      color: $orange;
+      padding: 8px;
+      margin-right: 8px;
+      width: 10%;
+      border-radius: 4px;
+      background-color: #333;
+
+      &:hover {
+        background-color: $orange;
+        color: $white;
+        border-color: $white;
+      }
+    }
+  }
+
+  // ARTIST INFO
+  .artistInfo {
+    padding: 24px;
+    margin-bottom: 48px;
+
+    .artistInfo-Labels {
+      position: absolute;
+      bottom: 0;
+      padding: 16px;
+      background-color: rgba(0,0,0, .5);
+      width: 100%;
+      div {
+        display: inline-block;
+        margin-right: 16px;
+      }
+    }
+
+    .artistInfo-Image {
+      padding-top: 32px;
+      position: relative;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // SONG PREVIEWS
+  .songPreviews {
+    background-color: red;
+    .songPreviews-Heading {
 
     }
 
-    .Search {
-
-    }
-
-    .Clear {
-
+    .songs {
       
     }
   }
+
+  // ALBUM IMAGES
+  .albumImages {
+    padding-top: 32px;
+  }
+
 }
