@@ -56,13 +56,12 @@ img {
     .container .artistInfo .artistInfo-Labels {
       position: absolute;
       bottom: 0;
-      padding: 16px;
+      padding: 24px;
       background-color: rgba(0, 0, 0, 0.5);
-      height: 12%;
       width: 100%; }
       .container .artistInfo .artistInfo-Labels div {
         display: inline-block;
-        margin-right: 16px; }
+        margin-right: 24px; }
     .container .artistInfo .artistInfo-Image {
       padding-top: 32px;
       position: relative; }
