@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+//  SCSS
+// import '../scss/main.scss';
 //  Child Components
 import Searchbar from '../components/Searchbar';
 import DisplayArtistInfo from '../components/DisplayArtistInfo';
@@ -7,6 +9,7 @@ import AlbumImages from '../components/AlbumImages';
 import ArtistTracks from '../components/ArtistTracks';
 //  Actions
 import { getArtist, getInput, getAlbums, getTracks, clearInput } from '../actions/actions';
+
 
 class App extends Component {
 

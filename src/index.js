@@ -15,6 +15,8 @@ const createPersistantStore = compose(persistState(null, { key: 'searches' }))(c
 
 const store = applyMiddleware(Thunk, Promise)(createPersistantStore)(AppState);
 
+
+
 // const createStoreWithMiddleWare = applyMiddleware(Thunk, Promise)(createStore);
 // const store = createStoreWithMiddleWare(AppState);
 
