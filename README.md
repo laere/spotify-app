@@ -20,6 +20,8 @@ Add OAUTH, and other features.
 
 Find a better way to do multiple API calls.
 
+Optimize code, components, etc.
+
 Add styling. **DONE**
 
 Add better styling.
