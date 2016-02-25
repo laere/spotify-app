@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 // import '../scss/main.scss';
 //  Child Components
 import Searchbar from '../components/Searchbar';
-import DisplayArtistInfo from '../components/DisplayArtistInfo';
+import ArtistInfo from '../components/ArtistInfo';
 import AlbumImages from '../components/AlbumImages';
 import ArtistTracks from '../components/ArtistTracks';
 //  Actions
@@ -37,7 +37,7 @@ class App extends Component {
         {/*Find a better way to do this
         if all 3 stat arrs.length <= 0 then run a loading data func*/}
         {receivedArtist
-          ? <DisplayArtistInfo artistData={artist} />
+          ? <ArtistInfo artistData={artist} />
           : <h1>Waiting for Artist data....</h1>
         }
         {receivedTracks

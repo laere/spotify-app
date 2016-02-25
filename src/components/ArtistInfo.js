@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import GL from 'gl-react';
-import { Surface } from 'gl-react-dom';
-import { Blur } from 'gl-react-blur';
 
-
-export default class DisplayArtistInfo extends Component {
+export default class ArtistInfo extends Component {
 
   render() {
 
@@ -32,6 +28,6 @@ export default class DisplayArtistInfo extends Component {
   }
 }
 
-DisplayArtistInfo.propTypes = {
+ArtistInfo.propTypes = {
   artistData: React.PropTypes.object.isRequired
 };
