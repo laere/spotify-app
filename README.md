@@ -6,20 +6,27 @@ Using the Spotify API as a single source of truth.
 
 **Middleware (in order):** <a href="https://github.com/gaearon/redux-thunk">redux-thunk</a>, <a href="https://github.com/pburtchaell/redux-promise-middleware">redux-promise-middleware</a>.
 
-**Immutable data:** dot-prop-immutable.
+**Immutable data:** <a href="https://github.com/debitoor/dot-prop-immutable">dot-prop-immutable.</a>
 
 **Grabbing data:** <a href="https://github.com/mzabriskie/axios">axios</a>.
 
+```clone``` the repo, ```cd``` to your path, run ```npm start```, app will be on ```localhost:8080``` 
 
 <h1>Things to do:</h1>
 
-Add local storage for user searches.
+Add local storage for user searches. **DONE**
 
-Possibly add OAUTH, and other features.
+Add OAUTH, and other features.
 
-When a use enters an improper name, update state back to default.
+Find a better way to do multiple API calls.
 
-Add styling.
+Optimize code, components, etc.
+
+Add styling. **DONE**
+
+Add better styling.
+
+
 
 
 <h2>All rights reserved to spotify and the use of their API</h2>
