@@ -1,6 +1,7 @@
 //  IMPORTS
 @import '_normalize';
 @import '_colors_mixins';
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 //  BAASE STYLES
 html {
@@ -13,11 +14,16 @@ html {
 }
 
 body {
-  background-color: #222;
+  // background-image: url('');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  background-color: $orange;
   color: $white;
   font-size: 2rem;
   line-height: 1.5;
   letter-spacing: 1;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -36,9 +42,15 @@ img {
 // MAIN STYLES
 
 .container {
-  background-color: #333;
+  background-color: rgba(0,0,0, .75);
   // border-left: 5px solid #181818;
   padding: 32px;
+
+  // TITLE
+  .pageTitle {
+    margin-bottom: 48px;
+    font-size: 4rem;
+  }
 
   // NAVBAR
   .navBar {
@@ -74,6 +86,7 @@ img {
         color: $white;
       }
     }
+
   }
 
   // ARTIST INFO
@@ -99,6 +112,7 @@ img {
         width: 100%;
       }
     }
+
   }
 
   // SONG PREVIEWS
@@ -124,11 +138,11 @@ img {
   // ALBUM IMAGES
   .albumImages {
     padding-top: 64px;
+    margin-bottom: 32px;
     position: relative;
 
     .albumImages-Image {
        box-shadow: 0 8px 6px -6px #111;
-
     }
 
     .albumImages-Title {
@@ -140,7 +154,6 @@ img {
       left: 10;
     }
 
-
   }
-
+// END OF MAIN STYLE
 }

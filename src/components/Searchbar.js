@@ -38,6 +38,7 @@ export default class Searchbar extends Component {
 
     return (
       <div className="navBar fluid-container">
+        <h1 className="pageTitle">Header Here</h1>
         <form onSubmit={this.handleOnSubmit} className="form-inline">
           <div>
             <input className="navBarInput" type="text" onChange={this.handleOnChange} value={searchValue} placeholder="Search your for your favorite artist..."/>
@@ -49,3 +50,11 @@ export default class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  searchValue: React.PropTypes.string.isRequired,
+  getArtist: React.PropTypes.func.isRequired,
+  getAlbums: React.PropTypes.func.isRequired,
+  getTracks: React.PropTypes.func.isRequired,
+  clearInput: React.PropTypes.func.isRequired
+};

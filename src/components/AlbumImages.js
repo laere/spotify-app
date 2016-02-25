@@ -8,7 +8,7 @@ export default class AlbumImages extends Component {
 
     const albumImages = albumData.albums.items.map((album, index) => {
       //load first 5
-      if(index <= 5) {
+      if(index <= 7) {
         return (
           <div key={index} className="col-lg-6 col-md-6 col-sm-12 col-xs-12 albumImages">
             <h3 className="albumImages-Title">{album.name}</h3>
@@ -31,3 +31,7 @@ export default class AlbumImages extends Component {
     );
   }
 }
+
+AlbumImages.propTypes = {
+  albumData: React.PropTypes.object.isRequired
+};

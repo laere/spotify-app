@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -6,11 +7,12 @@ html {
   box-sizing: border-box; }
 
 body {
-  background-color: #222;
+  background-color: #FF7B39;
   color: #fff;
   font-size: 2rem;
   line-height: 1.5;
-  letter-spacing: 1; }
+  letter-spacing: 1;
+  font-family: 'Montserrat', sans-serif; }
 
 a {
   color: #fff; }
@@ -23,8 +25,11 @@ img {
   height: auto; }
 
 .container {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 32px; }
+  .container .pageTitle {
+    margin-bottom: 48px;
+    font-size: 4rem; }
   .container .navBar {
     width: 100%;
     padding: 16px;
@@ -79,6 +84,7 @@ img {
         padding-top: 32px; }
   .container .albumImages {
     padding-top: 64px;
+    margin-bottom: 32px;
     position: relative; }
     .container .albumImages .albumImages-Image {
       box-shadow: 0 8px 6px -6px #111; }

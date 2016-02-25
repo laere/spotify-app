@@ -2,6 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
+    'webpack/hot/only-dev-server',
     './src/index.js'
   ],
   output: {
@@ -16,7 +17,7 @@ module.exports = {
       loaders: [
       {
         exclude: /node_modules/,
-        loader: 'babel'
+        loaders: ['react-hot', 'babel']
       },
       {
         test: /\.scss$/,
@@ -29,6 +30,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+    hot: true
   }
 };

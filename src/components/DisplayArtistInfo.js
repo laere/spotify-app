@@ -23,11 +23,15 @@ export default class DisplayArtistInfo extends Component {
           </a>
           <div className="artistInfo-Labels">
             <div className="artistInfo-Name">Artist:  {artistData.name}</div>
-            <div className="artistInfo-Genre">Genres: {artistGenres}</div>
-            <div className="artistInfo-Followers">Followers: {artistData.followers.total}</div>
+            <div className="artistInfo-Genre">{artistGenres}</div>
+            <div className="artistInfo-Followers">{artistData.followers.total} Followers</div>
           </div>
         </div>
       </div>
     );
   }
 }
+
+DisplayArtistInfo.propTypes = {
+  artistData: React.PropTypes.object.isRequired
+};
