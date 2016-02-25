@@ -27,33 +27,39 @@ img {
 .container {
   background-color: rgba(0, 0, 0, 0.75);
   padding: 32px; }
+  .container .socialMedia {
+    float: right; }
+    .container .socialMedia a {
+      margin-right: 12px; }
+      .container .socialMedia a:hover {
+        color: #FF7B39; }
   .container .pageTitle {
-    margin-bottom: 48px;
-    font-size: 4rem; }
-  .container .navBar {
+    margin-bottom: 64px;
+    font-size: 6rem; }
+  .container .search {
     width: 100%;
     padding: 16px;
     padding-top: 64px;
     margin-bottom: 24px;
     width: 100%; }
-    .container .navBar .navBarInput {
+    .container .search .searchInput {
       background-color: #363636;
       border: 1px solid #fff;
       color: #aaa;
       padding: 8px;
       margin-right: 8px;
       width: 75%; }
-      .container .navBar .navBarInput:focus {
+      .container .search .searchInput:focus {
         outline: none;
         background-color: #444; }
-    .container .navBar .navBarButton {
+    .container .search .searchButton {
       border: 2px solid #FF7B39;
       color: #FF7B39;
       padding: 8px;
       margin-right: 8px;
       width: 10%;
       background-color: #333; }
-      .container .navBar .navBarButton:hover {
+      .container .search .searchButton:hover {
         background-color: #FF7B39;
         color: #fff; }
   .container .artistInfo {

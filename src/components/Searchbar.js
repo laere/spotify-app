@@ -37,13 +37,13 @@ export default class Searchbar extends Component {
     const { searchValue } = this.props;
 
     return (
-      <div className="navBar fluid-container">
-        <h1 className="pageTitle">Header Here</h1>
+      <div className="search fluid-container">
+        <h1 className="pageTitle">Zeal</h1>
         <form onSubmit={this.handleOnSubmit} className="form-inline">
           <div>
-            <input className="navBarInput" type="text" onChange={this.handleOnChange} value={searchValue} placeholder="Search your for your favorite artist..."/>
-            <button className="navBarButton" >Search</button>
-            <button className="navBarButton" onClick={this.clear}>Clear</button>
+            <input className="searchInput" type="text" onChange={this.handleOnChange} value={searchValue} placeholder="Search your for your favorite artist..."/>
+            <button className="searchButton" >Search</button>
+            <button className="searchButton" onClick={this.clear}>Clear</button>
           </div>
         </form>
       </div>

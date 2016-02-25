@@ -46,21 +46,33 @@ img {
   // border-left: 5px solid #181818;
   padding: 32px;
 
+  // SOCIAL MEDIA
+  .socialMedia {
+    float: right;
+    a {
+      margin-right: 12px;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
   // TITLE
   .pageTitle {
-    margin-bottom: 48px;
-    font-size: 4rem;
+    margin-bottom: 64px;
+    font-size: 6rem;
   }
 
   // NAVBAR
-  .navBar {
+  .search {
     width: 100%;
     padding: 16px;
     padding-top: 64px;
     margin-bottom: 24px;
     width: 100%;
 
-    .navBarInput {
+    .searchInput {
       background-color: #363636;
       border: 1px solid $white;
       color: #aaa;
@@ -73,7 +85,7 @@ img {
       }
     }
 
-    .navBarButton {
+    .searchButton {
       border: 2px solid $orange;
       color: $orange;
       padding: 8px;

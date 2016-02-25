@@ -7,6 +7,7 @@ import Searchbar from '../components/Searchbar';
 import ArtistInfo from '../components/ArtistInfo';
 import AlbumImages from '../components/AlbumImages';
 import ArtistTracks from '../components/ArtistTracks';
+import SocialMedia from '../components/SocialMedia';
 //  Actions
 import { getArtist, getInput, getAlbums, getTracks, clearInput } from '../actions/actions';
 
@@ -25,6 +26,7 @@ class App extends Component {
 
     return (
       <div>
+        <SocialMedia />
         <Searchbar
           getInput={getInput}
           getArtist={getArtist}
