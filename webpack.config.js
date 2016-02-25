@@ -17,7 +17,7 @@ module.exports = {
       loaders: [
       {
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel']
+        loaders: 'babel'
       },
       {
         test: /\.scss$/,
@@ -30,7 +30,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './',
-    hot: true
+    contentBase: './'
   }
 };
