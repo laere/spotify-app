@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0; }
 
 *, *:after, *:before {
   box-sizing: border-box; }
@@ -38,9 +40,7 @@ img {
     font-size: 6rem; }
   .container .search {
     width: 100%;
-    padding-top: 64px;
-    margin-bottom: 24px;
-    width: 100%; }
+    margin-bottom: 48px; }
     .container .search .searchInput {
       background-color: #363636;
       border: 1px solid #fff;
@@ -62,7 +62,7 @@ img {
         background-color: #FF7B39;
         color: #fff; }
   .container .artistInfo {
-    margin-bottom: 64px; }
+    margin-bottom: 72px; }
     .container .artistInfo .artistInfo-Labels {
       position: absolute;
       bottom: 0;
@@ -80,7 +80,7 @@ img {
   .container .songPreviews {
     border-bottom: 1px solid #fff; }
     .container .songPreviews .songPreviews-Heading {
-      padding-bottom: 32px; }
+      padding-bottom: 48px; }
     .container .songPreviews .songs {
       margin: 8px 0; }
       .container .songPreviews .songs a:hover {

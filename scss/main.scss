@@ -6,7 +6,9 @@
 //  BAASE STYLES
 html {
   box-sizing: border-box;
-  font-size: 62.5% //1rem = 10px;
+  font-size: 62.5%; //1rem = 10px;
+  margin: 0;
+  padding: 0;
 }
 
 *, *:after, *:before {
@@ -49,6 +51,7 @@ img {
   // SOCIAL MEDIA
   .socialMedia {
     float: right;
+    // padding-top: 24px;
     a {
       margin-right: 12px;
 
@@ -67,9 +70,7 @@ img {
   // NAVBAR
   .search {
     width: 100%;
-    padding-top: 64px;
-    margin-bottom: 24px;
-    width: 100%;
+    margin-bottom: 48px;
 
     .searchInput {
       background-color: #363636;
@@ -102,7 +103,7 @@ img {
 
   // ARTIST INFO
   .artistInfo {
-    margin-bottom: 64px;
+    margin-bottom: 72px;
 
     .artistInfo-Labels {
       position: absolute;
@@ -131,7 +132,7 @@ img {
     border-bottom: 1px solid $white;
 
     .songPreviews-Heading {
-      padding-bottom: 32px;
+      padding-bottom: 48px;
     }
 
     .songs  {
