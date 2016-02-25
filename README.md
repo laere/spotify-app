@@ -14,13 +14,15 @@ Using the Spotify API as a single source of truth.
 
 <h1>Things to do:</h1>
 
-Add local storage for user searches.
+Add local storage for user searches. **DONE**
 
-Possibly add OAUTH, and other features.
+Add OAUTH, and other features.
 
-When a use enters an improper name, update state back to default.
+Find a better way to do multiple API calls.
 
-Add styling.
+Add styling. **DONE**
+
+Add better styling.
 
 
 
