@@ -9,7 +9,7 @@ import AlbumImages from '../components/AlbumImages';
 import ArtistTracks from '../components/ArtistTracks';
 import SocialMedia from '../components/SocialMedia';
 //  Actions
-import { getArtist, getInput, getAlbums, getTracks, clearInput } from '../actions/actions';
+import { getArtist, getInput, getAlbums, getTracks, clearInput, follow } from '../actions/actions';
 
 
 class App extends Component {
@@ -18,9 +18,9 @@ class App extends Component {
 
     const {
             getInput, getArtist, getAlbums,
-            searchValue, artist, albums,
+            searchValue, artist, albums, follow
             receivedArtist, receivedAlbums, tracks,
-            receivedTracks, getTracks, clearInput
+            receivedTracks, getTracks, clearInput, followed
 
           } = this.props;
 
@@ -39,7 +39,7 @@ class App extends Component {
         {/*Find a better way to do this
         if all 3 stat arrs.length <= 0 then run a loading data func*/}
         {receivedArtist
-          ? <ArtistInfo artistData={artist} />
+          ? <ArtistInfo artistData={artist} followed={followed} follow={follow}/>
           : <h1>Waiting for Artist data....</h1>
         }
         {receivedTracks
@@ -64,6 +64,7 @@ const mapStateToProps = (state) => {
     receivedArtist: state.receivedArtist,
     receivedAlbums: state.receivedAlbums,
     receivedTracks: state.receivedTracks,
+    followed: state.followed
   });
 }
 
@@ -79,7 +80,9 @@ App.propTypes = {
   getArtist: React.PropTypes.func.isRequired,
   getAlbums: React.PropTypes.func.isRequired,
   getTracks: React.PropTypes.func.isRequired,
-  clearInput: React.PropTypes.func.isRequired
+  clearInput: React.PropTypes.func.isRequired,
+  followed: React.PropTypes.bool.isRequired,
+  follow: React.PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, { getArtist, getInput, getAlbums, getTracks, clearInput } )(App);
+export default connect(mapStateToProps, { getArtist, getInput, getAlbums, getTracks, clearInput, follow } )(App);

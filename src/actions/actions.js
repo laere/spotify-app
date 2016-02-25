@@ -6,6 +6,7 @@ export const GET_INPUT = 'GET_INPUT';
 export const GET_ALBUMS = 'GET_ALBUMS';
 export const GET_TRACKS = 'GET_TRACKS';
 export const CLEAR_INPUT = 'CLEAR_INPUT';
+export const FOLLOW = 'FOLLOW';
 
 //other constants
 const BASE_URL = 'https://api.spotify.com/v1/search';
@@ -80,6 +81,11 @@ export const clearInput = () => {
   }
 }
 
+export const follow = () =>{
+  return {
+    type: FOLLOW
+  }
+}
 // export const actionCreators = {
 //   getArtist: getArtist,
 //   getAlbums: getAlbums,

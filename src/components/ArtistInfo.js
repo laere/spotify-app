@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
+import Follow from '../components/Follow';
 
 export default class ArtistInfo extends Component {
 
+  constructor() {
+    super()
+    this.followButton = this.followButton.bind(this);
+  }
+
+  followButton() {
+    const { followed } = this.props;
+    followed ? 'green' : 'red';
+  }
+
   render() {
 
-    const { artistData } = this.props;
+    const { artistData, follow } = this.props;
 
     const artistImage = artistData.images[1].url;
     const artistGenres = artistData.genres.map((genre, index) => {
@@ -23,6 +34,7 @@ export default class ArtistInfo extends Component {
             <div className="artistInfo-Followers">{artistData.followers.total} Followers</div>
           </div>
         </div>
+        <Follow onClick={this.followButton}/>
       </div>
     );
   }

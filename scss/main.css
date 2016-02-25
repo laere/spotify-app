@@ -74,9 +74,19 @@ img {
         margin-right: 24px; }
     .container .artistInfo .artistInfo-Image {
       padding-top: 32px;
+      margin-bottom: 8px;
       position: relative; }
       .container .artistInfo .artistInfo-Image img {
         width: 100%; }
+    .container .artistInfo .follow {
+      background-color: green;
+      color: #fff;
+      padding: 4px;
+      border-radius: 20px;
+      width: 15%;
+      font-size: 2rem;
+      text-align: center;
+      cursor: pointer; }
   .container .songPreviews {
     border-bottom: 1px solid #fff; }
     .container .songPreviews .songPreviews-Heading {

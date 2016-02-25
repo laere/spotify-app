@@ -5,7 +5,8 @@ import {
   GET_INPUT,
   GET_ALBUMS,
   GET_TRACKS,
-  CLEAR_INPUT
+  CLEAR_INPUT,
+  FOLLOW
 } from '../actions/actions';
 
 // STATE
@@ -16,7 +17,8 @@ const INITIAL_STATE = {
   searchValue: '',
   receivedArtist: false,
   receivedAlbums: false,
-  receivedTracks: false
+  receivedTracks: false,
+  followed: false
 };
 
 // REDUCER
@@ -44,6 +46,8 @@ export default function (state = INITIAL_STATE, action) {
   case CLEAR_INPUT:
     state = dotProp.set(state, 'searchValue', action.payload);
     console.log(state);
+    return state;
+  case FOLLOW:
     return state;
   default:
     return state;

@@ -119,10 +119,21 @@ img {
 
     .artistInfo-Image {
       padding-top: 32px;
+      margin-bottom: 8px;
       position: relative;
       img {
         width: 100%;
       }
+    }
+    .follow {
+      background-color: green;
+      color: $white;
+      padding: 4px;
+      border-radius: 20px;
+      width: 15%;
+      font-size: 2rem;
+      text-align: center;
+      cursor: pointer
     }
 
   }
