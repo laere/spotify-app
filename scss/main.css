@@ -74,7 +74,7 @@ img {
         margin-right: 24px; }
     .container .artistInfo .artistInfo-Image {
       padding-top: 32px;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
       position: relative; }
       .container .artistInfo .artistInfo-Image img {
         width: 100%; }

@@ -11,7 +11,7 @@ import AppState from './reducers/AppState';
 // Local Storage
 import persistState from 'redux-localstorage';
 
-const createPersistantStore = compose(persistState(null, { key: 'searches' }))(createStore);
+const createPersistantStore = compose(persistState(['artist', 'albums', 'tracks', 'receivedArtist', 'receivedAlbums', 'receivedTracks'], { key: 'searches' }))(createStore);
 
 const store = applyMiddleware(Thunk, Promise)(createPersistantStore)(AppState);
 

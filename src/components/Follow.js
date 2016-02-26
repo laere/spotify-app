@@ -9,7 +9,7 @@ export default class Follow extends Component {
       <input
         className="follow"
         onClick={handleFollowClick}
-        style={{backgroundColor: followed ? 'green' : 'red'}}
+        style={{backgroundColor: followed ? 'red' : 'green'}}
         value={followed ? 'Following' : 'Follow'}
         />
     );
