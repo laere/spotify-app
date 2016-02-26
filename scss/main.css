@@ -80,6 +80,7 @@ img {
         width: 100%; }
     .container .artistInfo .follow {
       color: #fff;
+      border: none;
       padding: 4px;
       border-radius: 20px;
       width: 15%;

@@ -5,16 +5,13 @@ export default class Follow extends Component {
 
     const { followed, handleFollowClick } = this.props;
 
-
     return (
-      <div
+      <input
         className="follow"
-        style={{backgroundColor: followed ? 'red' : 'green'}}
-        onClick={handleFollowClick}>
-
-        Follow
-
-      </div>
+        onClick={handleFollowClick}
+        style={{backgroundColor: followed ? 'green' : 'red'}}
+        value={followed ? 'Following' : 'Follow'}
+        />
     );
   }
 }
