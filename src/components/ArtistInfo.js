@@ -32,9 +32,9 @@ export default class ArtistInfo extends Component {
             <img src={artistImage} alt="image of the artist" />
           </a>
           <div className="artistInfo-Labels">
-            <div className="artistInfo-Name">Artist:  {artistData.name}</div>
-            <div className="artistInfo-Genre">{artistGenres}</div>
+            <div className="artistInfo-Name">{artistData.name}</div>
             <div className="artistInfo-Followers">{artistData.followers.total} Followers</div>
+            <div className="artistInfo-Genre">{artistGenres}</div>
           </div>
         </div>
         <Follow handleFollowClick={this.handleFollowClick} followed={followed}/>

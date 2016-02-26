@@ -111,10 +111,24 @@ img {
       padding: 24px;
       background-color: rgba(0,0,0, .5);
       width: 100%;
+
       div {
         display: inline-block;
-        margin-right: 24px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          float: right;
+          margin-left: 32px;
+        }
       }
+
+
+
+      .artistInfo-Name {
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+
     }
 
     .artistInfo-Image {
