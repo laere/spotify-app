@@ -22,7 +22,7 @@ export default class ArtistInfo extends Component {
 
     const artistImage = artistData.images[1].url;
     const artistGenres = artistData.genres.map((genre, index) => {
-      return <div key={index}>{genre}</div>
+      return <div key={index}>{genre.toUpperCase()}</div>
     });
 
     return (
