@@ -18,7 +18,7 @@ class App extends Component {
 
     const {
             getInput, getArtist, getAlbums,
-            searchValue, artist, albums, follow
+            searchValue, artist, albums, follow,
             receivedArtist, receivedAlbums, tracks,
             receivedTracks, getTracks, clearInput, followed
 
@@ -68,21 +68,21 @@ const mapStateToProps = (state) => {
   });
 }
 
-App.propTypes = {
-  artist: React.PropTypes.object.isRequired,
-  albums: React.PropTypes.object.isRequired,
-  tracks: React.PropTypes.object.isRequired,
-  searchValue: React.PropTypes.string.isRequired,
-  receivedArtist: React.PropTypes.bool.isRequired,
-  receivedAlbums: React.PropTypes.bool.isRequired,
-  receivedTracks: React.PropTypes.bool.isRequired,
-  getInput: React.PropTypes.func.isRequired,
-  getArtist: React.PropTypes.func.isRequired,
-  getAlbums: React.PropTypes.func.isRequired,
-  getTracks: React.PropTypes.func.isRequired,
-  clearInput: React.PropTypes.func.isRequired,
-  followed: React.PropTypes.bool.isRequired,
-  follow: React.PropTypes.func.isRequired
-};
+// App.propTypes = {
+//   artist: React.PropTypes.object.isRequired,
+//   albums: React.PropTypes.object.isRequired,
+//   tracks: React.PropTypes.object.isRequired,
+//   searchValue: React.PropTypes.string.isRequired,
+//   receivedArtist: React.PropTypes.bool.isRequired,
+//   receivedAlbums: React.PropTypes.bool.isRequired,
+//   receivedTracks: React.PropTypes.bool.isRequired,
+//   getInput: React.PropTypes.func.isRequired,
+//   getArtist: React.PropTypes.func.isRequired,
+//   getAlbums: React.PropTypes.func.isRequired,
+//   getTracks: React.PropTypes.func.isRequired,
+//   clearInput: React.PropTypes.func.isRequired,
+//   followed: React.PropTypes.bool.isRequired,
+//   follow: React.PropTypes.func.isRequired
+// };
 
 export default connect(mapStateToProps, { getArtist, getInput, getAlbums, getTracks, clearInput, follow } )(App);

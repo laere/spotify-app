@@ -48,6 +48,8 @@ export default function (state = INITIAL_STATE, action) {
     console.log(state);
     return state;
   case FOLLOW:
+    state = dotProp.set(state, 'followed', true);
+    console.log(state);
     return state;
   default:
     return state;

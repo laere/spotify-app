@@ -5,17 +5,20 @@ export default class ArtistInfo extends Component {
 
   constructor() {
     super()
-    this.followButton = this.followButton.bind(this);
+    this.handleFollowClick = this.handleFollowClick.bind(this);
   }
 
-  followButton() {
-    const { followed } = this.props;
-    followed ? 'green' : 'red';
+  handleFollowClick(e) {
+
+    const { follow } = this.props;
+
+    console.log('hello');
+    follow();
   }
 
   render() {
 
-    const { artistData, follow } = this.props;
+    const { artistData, followed } = this.props;
 
     const artistImage = artistData.images[1].url;
     const artistGenres = artistData.genres.map((genre, index) => {
@@ -34,12 +37,15 @@ export default class ArtistInfo extends Component {
             <div className="artistInfo-Followers">{artistData.followers.total} Followers</div>
           </div>
         </div>
-        <Follow onClick={this.followButton}/>
+        <Follow handleFollowClick={this.handleFollowClick} followed={followed}/>
       </div>
     );
   }
 }
 
-ArtistInfo.propTypes = {
-  artistData: React.PropTypes.object.isRequired
-};
+// ArtistInfo.propTypes = {
+//   artistData: React.PropTypes.object.isRequired,
+//   followed: React.PropTypes.bool.isRequired,
+//   follow: React.PropTypes.func.isRequired,
+//   handleFollowClick: React.PropTypes.func.isRequired
+// };

@@ -79,7 +79,6 @@ img {
       .container .artistInfo .artistInfo-Image img {
         width: 100%; }
     .container .artistInfo .follow {
-      background-color: green;
       color: #fff;
       padding: 4px;
       border-radius: 20px;
