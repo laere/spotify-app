@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import ArtistInfo from './ArtistInfo';
 import AlbumImages from './AlbumImages';
 import ArtistTracks from './ArtistTracks';
-import SocialMedia from './SocialMedia';
 //  Actions
 import { follow } from '../actions/actions';
 
@@ -34,7 +33,6 @@ class ArtistContainer extends Component {
     return (
       <div>
 
-        <SocialMedia />
         {/*Wait for user to search*/}
         {/*Find a better way to do this
         if all 3 stat arrs.length <= 0 then run a loading data func*/}

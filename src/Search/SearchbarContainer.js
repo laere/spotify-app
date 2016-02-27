@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Searchbar from './Searchbar';
+import SocialMedia from './SocialMedia';
 
 import {
   getArtist,
@@ -24,6 +25,7 @@ class SearchbarContainer extends Component {
 
     return (
     <div>
+      <SocialMedia />
       <Searchbar
         getInput={getInput}
         getArtist={getArtist}
