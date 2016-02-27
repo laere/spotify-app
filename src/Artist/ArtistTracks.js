@@ -28,7 +28,3 @@ export default class ArtistTracks extends Component {
     );
   }
 }
-
-ArtistTracks.propTypes = {
-  trackData: React.PropTypes.object.isRequired
-};

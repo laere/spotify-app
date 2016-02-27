@@ -6,7 +6,8 @@ import {
   GET_ALBUMS,
   GET_TRACKS,
   CLEAR_INPUT,
-  FOLLOW
+  FOLLOW,
+  GET_PLAYLIST
 } from '../actions/actions';
 
 // STATE
@@ -14,6 +15,7 @@ const INITIAL_STATE = {
   artist: [],
   albums: [],
   tracks: [],
+  playlist: [],
   searchValue: '',
   receivedArtist: false,
   receivedAlbums: false,
@@ -37,6 +39,10 @@ export default function (state = INITIAL_STATE, action) {
   case GET_TRACKS:
     state = dotProp.set(state, 'tracks', action.payload.data);
     state = dotProp.set(state, 'receivedTracks', true);
+    console.log(state);
+    return state;
+  case GET_PLAYLIST:
+    state = dotProp.set(state, 'playlist', action.payload.data);
     console.log(state);
     return state;
   case GET_INPUT:

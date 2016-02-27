@@ -7,6 +7,7 @@ export const GET_ALBUMS = 'GET_ALBUMS';
 export const GET_TRACKS = 'GET_TRACKS';
 export const CLEAR_INPUT = 'CLEAR_INPUT';
 export const FOLLOW = 'FOLLOW';
+export const GET_PLAYLIST = 'GET_PLAYLIST';
 
 //other constants
 const BASE_URL = 'https://api.spotify.com/v1/search';
@@ -57,6 +58,23 @@ export const getTracks = (searchValue) => {
       console.log(response);
       dispatch({
         type: GET_TRACKS,
+        payload: request
+      });
+
+    }, function(err) {
+        console.log('Error loading data');
+    });
+  };
+};
+
+export const getPlaylist = (searchValue) => {
+  return (dispatch, getState) => {
+    const request = axios.get(`${BASE_URL}?q=${searchValue}&type=playlist`);
+
+    request.then(function(response) {
+      console.log(response);
+      dispatch({
+        type: GET_PLAYLIST,
         payload: request
       });
 

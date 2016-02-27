@@ -31,7 +31,3 @@ export default class AlbumImages extends Component {
     );
   }
 }
-
-AlbumImages.propTypes = {
-  albumData: React.PropTypes.object.isRequired
-};

@@ -1,24 +1,11 @@
 import React, { Component } from 'react';
-import Follow from '../components/Follow';
+import Follow from './Follow';
 
 export default class ArtistInfo extends Component {
 
-  constructor() {
-    super()
-    this.handleFollowClick = this.handleFollowClick.bind(this);
-  }
-
-  handleFollowClick(e) {
-
-    const { follow } = this.props;
-
-    console.log('hello');
-    follow();
-  }
-
   render() {
 
-    const { artistData, followed } = this.props;
+    const { artistData, followed, handleFollowClick } = this.props;
 
     const artistImage = artistData.images[1].url;
     const artistGenres = artistData.genres.map((genre, index) => {
@@ -37,15 +24,8 @@ export default class ArtistInfo extends Component {
             <div className="artistInfo-Genre">{artistGenres}</div>
           </div>
         </div>
-        <Follow handleFollowClick={this.handleFollowClick} followed={followed}/>
+        <Follow handleFollowClick={handleFollowClick} followed={followed}/>
       </div>
     );
   }
 }
-
-// ArtistInfo.propTypes = {
-//   artistData: React.PropTypes.object.isRequired,
-//   followed: React.PropTypes.bool.isRequired,
-//   follow: React.PropTypes.func.isRequired,
-//   handleFollowClick: React.PropTypes.func.isRequired
-// };

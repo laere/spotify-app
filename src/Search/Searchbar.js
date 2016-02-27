@@ -13,11 +13,10 @@ export default class Searchbar extends Component {
   handleOnChange(e) {
     const { getInput } = this.props;
 
-    this.props.getInput(e.target.value);
+    getInput(e.target.value);
   }
 
   handleOnSubmit(e) {
-
     e.preventDefault();
     const { searchValue, getArtist, getAlbums, getTracks } = this.props;
 
@@ -41,7 +40,7 @@ export default class Searchbar extends Component {
         <h1 className="pageTitle">Zeal</h1>
         <form onSubmit={this.handleOnSubmit} className="form-inline">
           <div>
-            <input className="searchInput" type="text" onChange={this.handleOnChange} value={searchValue} placeholder="Search your for your favorite artist..."/>
+            <input className="searchInput" type="text" onChange={this.handleOnChange} value={searchValue} placeholder="Search for your favorite artist..."/>
             <button className="searchButton" >Search</button>
             <button className="searchButton" onClick={this.clear}>Clear</button>
           </div>
@@ -51,10 +50,10 @@ export default class Searchbar extends Component {
   }
 }
 
-Searchbar.propTypes = {
-  searchValue: React.PropTypes.string.isRequired,
-  getArtist: React.PropTypes.func.isRequired,
-  getAlbums: React.PropTypes.func.isRequired,
-  getTracks: React.PropTypes.func.isRequired,
-  clearInput: React.PropTypes.func.isRequired
-};
+// Searchbar.propTypes = {
+//   searchValue: React.PropTypes.string.isRequired,
+//   getArtist: React.PropTypes.func.isRequired,
+//   getAlbums: React.PropTypes.func.isRequired,
+//   getTracks: React.PropTypes.func.isRequired,
+//   clearInput: React.PropTypes.func.isRequired
+// };
