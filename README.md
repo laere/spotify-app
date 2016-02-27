@@ -16,15 +16,13 @@ Using the Spotify API as a single source of truth.
 
 Add local storage for user searches. **DONE**
 
-Add OAUTH, and other features.
-
 Find a better way to do multiple API calls.
 
-Optimize code, components, etc.
+Optimize code, components, etc. **DONE**
 
 Add styling. **DONE**
 
-Add better styling.
+Split Artist and Searchbar into seperate containers. **DONE**
 
 
 
